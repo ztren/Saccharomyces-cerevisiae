@@ -124,7 +124,7 @@ def get_diff(m_type: int, inf_ver: str) -> str:
 def get_ap_card(ap_card: int) -> str:
     ap_card = str(ap_card).zfill(4)
     card_file = 'ap_'
-    card_ver, is_r, is_s = int(ap_card[0]) + 1, (ap_card[1] == '5') | (ap_card[1] == '6'), (ap_card[1] == '9')
+    card_ver, is_r, is_s = int(ap_card[0]) + 1, (ap_card[1] == '5')|(ap_card[1] == '6'), (ap_card[1] == '9')
     if card_ver == 1:
         pass
     else:
@@ -345,7 +345,7 @@ def generate_std_profile(profile: list, vf: float) -> np.array:
     time_font = ImageFont.truetype(font_DFHS, 14, encoding='utf-8', index=0)
     pen.text((218, 146), aka_name, color_white, aka_font)
     pen.text((218, 174), user_name, color_white, name_font)
-    pen.text((218, 227), 'Asphyxia CORE', color_white, aka_font)
+    pen.text((218, 227), "ミカかわいい", color_white, aka_font) # replaces Asphyxia Core
     pen.text((436, 295), '%.3f' % vf, color_white, vf_font)
     pen.text((602, 291), time.strftime('%a %Y/%m/%d %H: %M', time.localtime()), color_white, time_font)
 
@@ -426,7 +426,7 @@ def generate_mini_profile(profile: list, vf: float, vf_specific: list = None) ->
         time_str = vf_specific[2]
         pen.text((46, 214), 'Played at %s' % time_str, color_white, ser_font)
     else:
-        pen.text((46, 214), 'Asphyxia CORE', color_white, ser_font)
+        pen.text((46, 214), 'ミカかわいい', color_white, ser_font)
 
     text_layer = np.array(text_layer)
     png_superimpose(bg, text_layer)
