@@ -1,6 +1,19 @@
 # Saccharomyces-cerevisiae
 
+modded by Saika
+
 An OpenCV &amp; PIL(Pillow) based sdvx@asphyxia score checker
+
+## 省流：
+
+1. ```pip install -r requirement.txt``` 
+我也忘了windows怎么装pip了。。。
+
+2. config.cfg 里 `[Init]` 栏加一行 ```test_mode = 1```
+
+3. 使用run.bat运行
+
+剩下的按照原来的文档走就行
 
 ## Introduction
 
